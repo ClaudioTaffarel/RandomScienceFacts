@@ -1,10 +1,31 @@
-.bg-video {
+* {
+  overflow: hidden;
+}
+
+.backgronzz {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
+}
+
+.headerz img {
+  max-width: 80%;
+  height: auto;
+  margin-top: -20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  image-rendering: pixelated;
+  animation: floaty 3s ease-in-out infinite;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6));
+}
+
+@keyframes floaty {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
 }
